@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      line{
+        stroke: rgb(0, 0, 0);
+        stroke-width: 10px;
+      }
+    </style>
+    <script src="inline-css-for-svg.js"></script>
+  </head>
+  <body>
+
+    <a id="downloadLink" title="download.svg" download="download.svg" href-lang="image/svg+xml" href="">Download SVG</a>
+
+    <hr>
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <line x1="20" y1="20" x2="80" y2="80"></line>
+    </svg>
+
+    <script>
+      var svgCopy = document.querySelector('svg').cloneNode(true);
+
+      inlineAllStylesheets(svgCopy);
+
+      var encodedSVG = 'data:image/svg+xml;base64,\n' + btoa(svgCopy.outerHTML);
+
+      document.querySelector('#downloadLink').href = encodedSVG;
+    </script>
+
+  </body>
+</html>
