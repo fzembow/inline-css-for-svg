@@ -33,7 +33,7 @@ The resultant SVG element will have all the properties from CSS rules that apply
 </style>
 ```
 
-See [example.html!](example.html) to see how this can be used to download SVG files using javascript that can be viewed in other editors.
+See [example.html](example.html) to see how this can be used to download SVG files using javascript that can be viewed in other editors.
 
 # Limitations
 Styles with selectors set on ancestors of the SVG element will not be inlined.
